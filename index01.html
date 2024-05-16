@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dhurjati&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="D:/magazin/style.css">
+    <title>OutdoorHiker</title>
+</head>
+
+
+<body>
+  <div class=" header">
+    <!-- <label for="city-select"></label> -->
+
+    <select name="city" id="city-select">
+      <!-- <option value="">Выберите город</option> -->
+      <option value="RnD">Ростов-на-Дону</option>
+      <option value="MSC">Москва</option>
+      <option value="SpB">Санкт-Петербург</option>
+      <option value="KRS">Краснодар</option>
+      <option value="SOCHI">Сочи</option>
+      <option value="MinV">Минеральные Воды</option>
+    </select>  </div>
+    <ul class="menu-main">
+      <li><a href="D:\magazin\index01.html">Главная</a></li>
+      <li><a href="D:\magazin\maincat.html">Каталог</a></li>
+      <!-- <li><a href="D:\Kanye\index02.html">Магазины</a></li> -->
+      <!-- <li><a href="D:\Kanye\index03.html">Скидки и акции</a></li> -->
+      <!-- <li><a href="D:\Kanye\index01.html">Доставка</a></li> -->
+      <!-- <li><a href="D:\Kanye\index02.html">Корзина</a></li> -->
+      <li><a href="#" onclick="openForm()">Связаться</a></li>
+    </ul>
+    <div class="overlay" id="overlay">
+      <div class="form-container">
+        <span class="close-btn" onclick="closeForm()">X</span>
+        <h2>Оставьте заявку на звонок!</h2>
+        <form id="myForm">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required>
+          <br>
+          <label for="phone">Телефон:</label>
+          <input type="tel" id="phone" name="phone" required>
+          <br>
+          <label for="age">Возраст:</label>
+          <input type="number" id="age" name="age" required>
+          <br>
+          <button type="button" onclick="submitForm()">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      function openForm() {
+        document.getElementById("overlay").style.display = "flex";
+      }
+    
+      function closeForm() {
+        document.getElementById("overlay").style.display = "none";
+      }
+    
+      function submitForm() {
+        alert("Форма отправлена!");
+        closeForm();
+      }
+    </script>
+  
+
+    <div class="slider">
+      <a>
+        <img src="D:\magazin\sld1.png" class="active">
+      </a>
+      <a>
+        <img src="D:\magazin\sld2.png" class="active">
+      </a>
+      <a>
+        <img src="D:\magazin\sld3.png" class="active">
+      </a>
+  
+  
+    </div>
+    <div class="button-container">
+      <button onclick="prevImage()" class="button">Назад</button>
+      <button onclick="nextImage()" class="button">Вперед</button>
+    </div>
+
+
+
+    <script>
+      var currentImageIndex = 0;
+      var images = document.querySelectorAll('.slider img');
+  
+      function showImage(index) {
+        images.forEach(img => img.classList.remove('active'));
+        images[index].classList.add('active');
+      }
+  
+      function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        showImage(currentImageIndex);
+      }
+  
+      function prevImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        showImage(currentImageIndex);
+      }
+  
+      // Инициализация первого изображения
+      showImage(currentImageIndex);
+    </script>
+  
+  <div class="disco">
+    <div class="disco-tittle">
+        КАТАЛОГ
+    </div>
+</div>
+<div class="disco-grid">
+    <div class="grid-item">
+      <a href="D:\magazin\palatki.html"><img src="D:\magazin\cat1.png" alt="" height="300px"; width="300px" style="border-radius: 15px;"></a>
+    </div>
+    <div class="grid-item">
+      <a href="D:\magazin\spal.html"><img src="D:\magazin\cat2.png" alt="" height="300px"; width="300px" style="border-radius: 15px;"></a>
+    </div>
+    <div class="grid-item">
+      <a href="D:\magazin\sum.html"><img src="D:\magazin\cat3.png" alt="" height="300px"; width="300px" style="border-radius: 15px;"></a>
+    </div>
+    <div class="grid-item">
+      <a href="D:\magazin\wear.html"><img src="D:\magazin\cat4.png" alt="" height="300px"; width="300px" style="border-radius: 15px;"></a>
+    </div>
+</div>
+<div class="awards-under-text">
+  <div class="awards-u1">
+      <p>Палатки</p>
+  </div>
+  <div class="awards-u2">
+      <p>Спальные мешки</p>
+  </div>
+  <div class="awards-u3">
+      <p>Рюкзаки</p>
+  </div>
+  <div class="awards-u4">
+    <p>Одежда и обувь</p>
+  </div>
+</div>
+
+
+<div class="disco">
+  <div class="disco-tittle" style="padding-top: 40px;">
+      МАГАЗИНЫ
+  </div>
+</div>
+<div class="alb-form">
+  <!-- <div class="form-img-bio">
+      <img class="kanye-img" src="D:\Kanye\images\cdo1.png" width="350px" style="padding-bottom: 50px;">
+  </div> -->
+  <div class="bio-first-text">
+      <div class="alb-form-tittle">Ростов-на-Дону</div>
+      <div class="alb-right-text">Пл. Ленина, д.1 
+        <br>
+        +7-(777) 777-77-77
+        <br>
+        outdoor@shop.com
+        <br>
+        Пн-Пт: 9:00-20:00
+        <br>
+        Сб-Вс: 9:00-19:00
+      </div>
+  </div>
+</div>
+
+<div class="alb-form1">
+  <!-- <div class="form-img-bio">
+      <img class="kanye-img" src="D:\Kanye\images\cdo1.png" width="350px" style="padding-bottom: 50px;">
+  </div> -->
+  <div class="bio-first-text">
+      <div class="alb-form-tittle">Ростов-на-Дону</div>
+      <div class="alb-right-text">Пл. Ленина, д.1 
+        <br>
+        +7-(777) 777-77-77
+        <br>
+        outdoor@shop.com
+        <br>
+        Пн-Пт: 9:00-20:00
+        <br>
+        Сб-Вс: 9:00-19:00
+      </div>
+  </div>
+</div>
+
+<div class="disco">
+  <div class="disco-tittle" style="padding-top: 40px;">
+      АКЦИИ
+  </div>
+</div>
+
+<div class="alb-form5">
+  <div class="form-img-bio1">
+      <img class="kanye-img" src="D:\magazin\sales.png" width="500px">
+  </div>
+  <div class="bio-first-text">
+      <div class="alb-form-tittle1">Лови <span style="color: rgb(186, 81, 34);"> скидку </span> на все товары в каталоге!</div>
+      <!-- <div class="bio-big-text">Детство и юность</div> -->
+      <div class="alb-right-text1"> <br>На все товары распространяется скидка 10%
+      <br><br><br><br>
+      <a href="D:/magazin/maincat.html" style="color: white;"> Подробнее</a>
+      </div>
+  </div>
+</div>
+
+<div class="futer">
+  <div class="lalala">
+    © VIAS21 GROUP, 2024
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>OutdoorHiker</title>
+  <link rel="stylesheet" href="D:\magazin\style.css">
+</head>
+
+<body>
+  <h1 style="color:black">Каталог</h1>
+  <div class="slider1">
+    <a href="palatki.html">
+      <img src="D:\magazin\palatka1.jpg" class="active">
+    </a>
+    <a href="spal.html">
+      <img src="D:\magazin\spal1.jpg" class="active">
+    </a>
+    <a href="sum.html">
+      <img src="D:\magazin\sum1.jpg" class="active">
+    </a>
+    <a href="wear.html">
+        <img src="D:\magazin\wear1.jpg" class="active">
+      </a>
+
+  </div>
+  <div class="button-container1">
+    <button onclick="prevImage()" class="button1">Назад</button>
+    <button onclick="nextImage()" class="button1">Вперед</button>
+  </div>
+
+  <script>
+    var currentImageIndex = 0;
+    var images = document.querySelectorAll('.slider1 img');
+
+    function showImage(index) {
+      images.forEach(img => img.classList.remove('active'));
+      images[index].classList.add('active');
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      showImage(currentImageIndex);
+    }
+
+    // Инициализация первого изображения
+    showImage(currentImageIndex);
+  </script>
+
+</body>
+
+</html>

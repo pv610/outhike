@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Карточка товара</title>
+  <link rel="stylesheet" type="text/css" href="D:\magazin\style.css">
+</head>
+<body>
+  <div style=" display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;">
+    <h1 style="color: black;">Карточка товара</h1>
+    <div class="card">
+      <img id="main-image" src="D:\magazin\spal3.jpg" style="width: 320px; /* Увеличена ширина изображения до 320px */
+      height: 240px; /* Увеличена высота изображения до 240px */
+      object-fit: cover;
+      margin-bottom: 20px;">
+      <div class="more-images">
+        <img src="D:\magazin\spal33.jpg"  onmouseout="resetImage()">
+        <img src="D:\magazin\spal333.jpg" onmouseout="resetImage()">
+      </div>
+      <p>Арт. 114755N16-3M-one size</p>
+      <p>Спальный мешок Northland Hypnos +4 правосторонний</p>
+      <p>Цена - 6 499р.</p>
+      <p>Теплый спальный мешок от Northland для комфорта во время ночевок на природе. <br>
+
+        ЭКОЛОГИЧНОСТЬ<br>
+        При изготовлении модели использовались экологически чистые материалы, не содержащие фторполимеров.<br>
+        СОХРАНЕНИЕ ТЕПЛА<br>
+        Высокотехнологичный наполнитель AlphaCloud отлично сохраняет тепло при небольшом весе и объеме.<br>
+        НИЗКИЙ ВЕС<br>
+        Вес спальника составляет всего 1.2 кг.<br>
+        ВЛАГООТВОД<br>
+        Воздухопроницаемый материал и гидрофобный утеплитель эффективно отводят влагу.<br>
+        ПОДБОР ПО РОСТУ<br>
+        Модель поставляется в 2 ростовках.<br>
+        ВОЗМОЖНОСТЬ СОСТЕГИВАНИЯ<br>
+        2 мешка с разным расположением молнии могут быть состегнуты вместе. Сторона состегивания правая.</p>
+      <div id="rating_bar">
+        <span id="rate_1">&#9734;</span>
+        <span id="rate_2">&#9734;</span>
+        <span id="rate_3">&#9734;</span>
+        <span id="rate_4">&#9734;</span>
+        <span id="rate_5">&#9734;</span>
+      </div>
+    </div>
+  </div>
+    <p><a href="C:\Users\Паша\Desktop\lab4\4 laba.html" class="back-button">Отзыв</a></p>
+    <button onclick="goBack()" class="back-button">Назад</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function changeImage(imageUrl) {
+      document.getElementById('main-image').src = imageUrl;
+    }
+
+    // function resetImage() {
+    //   document.getElementById('main-image').src = '';
+    // }
+
+
+    let spans = document.getElementById("rating_bar").getElementsByTagName('span');
+
+for (let i = 0; i < spans.length; i++) {
+  spans[i].onmouseover = hoverStar;
+}
+
+function hoverStar() {
+  for (let i = 0; i < this.id.charAt(5); i++) {
+    spans[i].innerText = '⭐️';
+  }
+
+  for (let i = this.id.charAt(5); i < 5; i++) {
+    spans[i].innerText = '✰';
+  }
+}
+  </script>
+</body>
+</html>

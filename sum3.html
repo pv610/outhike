@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Карточка товара</title>
+  <link rel="stylesheet" type="text/css" href="D:\magazin\style.css">
+</head>
+<body>
+  <div style=" display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;">
+    <h1 style="color: black;">Карточка товара</h1>
+    <div class="card">
+      <img id="main-image" src="D:\magazin\sum3.jpg" style="width: 320px; /* Увеличена ширина изображения до 320px */
+      height: 240px; /* Увеличена высота изображения до 240px */
+      object-fit: cover;
+      margin-bottom: 20px;">
+      <div class="more-images">
+        <img src="D:\magazin\sum33.jpg"  onmouseout="resetImage()">
+        <!-- <img src="D:\magazin\sum333.jpg" onmouseout="resetImage()"> -->
+      </div>
+      <p>Арт. 12M6BK60DOMTOK2P-.-One size</p>
+      <p>Туристический рюкзак KLYMIT Motion 60L</p>
+      <p>Цена - 27 200р</p>
+      <p>Многоцелевой функциональный рюкзак для пеших путешествий и автотуризма. Прочный, легкий и водонепроницаемый. Технология AirFrame, то есть встроенная надувная спинка с сеткой, обеспечивает оптимальный воздухообмен, обладает массажным эффектом. Регулируемые поясные и грудные лямки анатомической формы, поясной ремень с застежкой на карабине, боковые утягивающие стропы, 1 внешний карман на молнии, 2 боковых кармана для бутылок воды, 2 кармана на поясе на молнии. Cовместим с гидратором. Двойной механизм закрытия: внешний — на два карабина, внутренний — на утягивающий строп. Широкий плотный пояс, оптимально распределяющий нагрузку в тазобедренной области, с интегрированным насосом в чехле. Скрытые петли для крепления аксессуаров (на карабин). Дополнительный салатовый водозащитный чехол.Материал — полиэстер 400D. Нагрузка 34 кг. Обхват пояса 76–152. Длина лямок 43–50. Объем 60 л. Вес 1.3 кг. Цвет черный. Гарантия 2 года.</p>
+      <div id="rating_bar">
+        <span id="rate_1">&#9734;</span>
+        <span id="rate_2">&#9734;</span>
+        <span id="rate_3">&#9734;</span>
+        <span id="rate_4">&#9734;</span>
+        <span id="rate_5">&#9734;</span>
+      </div>
+    </div>
+  </div>
+    <p><a href="C:\Users\Паша\Desktop\lab4\4 laba.html" class="back-button">Отзыв</a></p>
+    <button onclick="goBack()" class="back-button">Назад</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function changeImage(imageUrl) {
+      document.getElementById('main-image').src = imageUrl;
+    }
+
+    // function resetImage() {
+    //   document.getElementById('main-image').src = '';
+    // }
+
+
+    let spans = document.getElementById("rating_bar").getElementsByTagName('span');
+
+for (let i = 0; i < spans.length; i++) {
+  spans[i].onmouseover = hoverStar;
+}
+
+function hoverStar() {
+  for (let i = 0; i < this.id.charAt(5); i++) {
+    spans[i].innerText = '⭐️';
+  }
+
+  for (let i = this.id.charAt(5); i < 5; i++) {
+    spans[i].innerText = '✰';
+  }
+}
+  </script>
+</body>
+</html>

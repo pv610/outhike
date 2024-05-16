@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Карточка товара</title>
+  <link rel="stylesheet" type="text/css" href="D:\magazin\style.css">
+</head>
+<body>
+  <div style=" display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;">
+    <h1 style="color: black;">Карточка товара</h1>
+    <div class="card">
+      <img id="main-image" src="D:\magazin\palatka3.jpg" style="width: 320px; /* Увеличена ширина изображения до 320px */
+      height: 240px; /* Увеличена высота изображения до 240px */
+      object-fit: cover;
+      margin-bottom: 20px;">
+      <div class="more-images">
+        <img src="D:\magazin\palatka33.jpg"  onmouseout="resetImage()">
+        <img src="D:\magazin\palatka333.jpg" onmouseout="resetImage()">
+      </div>
+      <p>Арт. 114818OUT-T1-one size</p>
+      <p>Палатка 4-местная Outventure Twin Sky 4</p>
+      <p>Цена - 21 999р</p>
+      <p>Идеальная двухкомнатная палатка Outventure станет идеальным выбором для многодневного кемпинга.</p>
+      <div id="rating_bar">
+        <span id="rate_1">&#9734;</span>
+        <span id="rate_2">&#9734;</span>
+        <span id="rate_3">&#9734;</span>
+        <span id="rate_4">&#9734;</span>
+        <span id="rate_5">&#9734;</span>
+      </div>
+    </div>
+  </div>
+    <p><a href="C:\Users\Паша\Desktop\lab4\4 laba.html" class="back-button">Отзыв</a></p>
+    <button onclick="goBack()" class="back-button">Назад</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function changeImage(imageUrl) {
+      document.getElementById('main-image').src = imageUrl;
+    }
+
+    // function resetImage() {
+    //   document.getElementById('main-image').src = '';
+    // }
+
+
+    let spans = document.getElementById("rating_bar").getElementsByTagName('span');
+
+for (let i = 0; i < spans.length; i++) {
+  spans[i].onmouseover = hoverStar;
+}
+
+function hoverStar() {
+  for (let i = 0; i < this.id.charAt(5); i++) {
+    spans[i].innerText = '⭐️';
+  }
+
+  for (let i = this.id.charAt(5); i < 5; i++) {
+    spans[i].innerText = '✰';
+  }
+}
+  </script>
+</body>
+</html>

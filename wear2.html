@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Карточка товара</title>
+  <link rel="stylesheet" type="text/css" href="D:\magazin\style.css">
+</head>
+<body>
+  <div style=" display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;">
+    <h1 style="color: black;">Карточка товара</h1>
+    <div class="card">
+      <img id="main-image" src="https://www.salomon.com/en-us/shop/media/catalog/product/article_images/L41668500/L41668500_434c684acce2a965441d99824f01b371.png?auto=webp&bg-color=f5f5f5&dpr=1.25&fit=cover&format=pjpg&optimize=low&orient=1&pad=216%2C105%2C219%2C105&width=915" style="width: 320px; /* Увеличена ширина изображения до 320px */
+      height: 240px; /* Увеличена высота изображения до 240px */
+      object-fit: cover;
+      margin-bottom: 20px;">
+      <div class="more-images">
+        <img src="https://www.salomon.com/en-us/shop/media/catalog/product/article_images/L41668500/L41668500_82565b84e44cfab9d351014ec20fced4.png?auto=webp&bg-color=f5f5f5&dpr=1.25&fit=cover&format=pjpg&optimize=low&orient=1&pad=72%2C35%2C73%2C35&width=305, https://www.salomon.com/en-us/shop/media/catalog/product/article_images/L41668500/L41668500_82565b84e44cfab9d351014ec20fced4.png?auto=webp&bg-color=f5f5f5&dpr=2&fit=cover&format=pjpg&optimize=low&orient=1&pad=72%2C35%2C73%2C35&width=305"  onmouseout="resetImage()">
+        <img src="https://www.salomon.com/en-us/shop/media/catalog/product/article_images/L41668500/L41668500_015280768508151e7478bca108672bad.png?auto=webp&bg-color=f5f5f5&dpr=1.25&fit=cover&format=pjpg&optimize=low&orient=1&pad=72%2C35%2C73%2C35&width=305, https://www.salomon.com/en-us/shop/media/catalog/product/article_images/L41668500/L41668500_015280768508151e7478bca108672bad.png?auto=webp&bg-color=f5f5f5&dpr=2&fit=cover&format=pjpg&optimize=low&orient=1&pad=72%2C35%2C73%2C35&width=305" onmouseout="resetImage()">
+      </div>
+      <p>Арт. L41668500</p>
+      <p>Ботинки унисекс QUEST GORE-TEX ADVANCED</p>
+      <p>Цена - 25 710р</p>
+      <p>Созданы для обеспечения высочайшего уровня функциональности и защиты, модель QUEST GTX ADVANCED оснащена защитной мембраной GORE-TEX, которая защищает ноги от непогоды. Эти устойчивые к атмосферным воздействиям и устойчивые ботинки созданы для того, чтобы выдерживать испытания в суровых зимних условиях, обеспечивая надежное сцепление и поддержку на больших расстояниях.</p>
+      <div id="rating_bar">
+        <span id="rate_1">&#9734;</span>
+        <span id="rate_2">&#9734;</span>
+        <span id="rate_3">&#9734;</span>
+        <span id="rate_4">&#9734;</span>
+        <span id="rate_5">&#9734;</span>
+      </div>
+    </div>
+  </div>
+    <p><a href="C:\Users\Паша\Desktop\lab4\4 laba.html" class="back-button">Отзыв</a></p>
+    <button onclick="goBack()" class="back-button">Назад</button>
+  </div>
+
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+
+    function changeImage(imageUrl) {
+      document.getElementById('main-image').src = imageUrl;
+    }
+
+    // function resetImage() {
+    //   document.getElementById('main-image').src = '';
+    // }
+
+
+    let spans = document.getElementById("rating_bar").getElementsByTagName('span');
+
+for (let i = 0; i < spans.length; i++) {
+  spans[i].onmouseover = hoverStar;
+}
+
+function hoverStar() {
+  for (let i = 0; i < this.id.charAt(5); i++) {
+    spans[i].innerText = '⭐️';
+  }
+
+  for (let i = this.id.charAt(5); i < 5; i++) {
+    spans[i].innerText = '✰';
+  }
+}
+  </script>
+</body>
+</html>
