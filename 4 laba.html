@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="4 labaa.css">
+    <title>Анкета для карты постоянного клиента</title>
+</head>
+<body>
+    <form id="customerForm">
+        <label for="surname">Фамилия:</label>
+        <input type="text" id="surname" name="surname" onchange="capitalizeInput(this)">
+
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" onchange="capitalizeInput(this)">
+
+        <label for="age">Возраст:</label>
+        <input type="number" id="age" name="age">
+
+        <label for="number">Телефон:</label>
+        <input type="tel" id="number" name="number">
+
+        <button type="button" onclick="submitForm()">Отправить</button>
+        <button type="button" onclick="resetForm()">Ввести данные заново</button>
+    </form>
+
+    <script src="4 labaaa.js"></script>
+</body>
+</html>
