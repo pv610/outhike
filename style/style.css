@@ -1,0 +1,529 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+  font-family: 'Ubuntu Condensed', sans-serif;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: white;
+  /* box-sizing: border-box; */
+}
+
+
+select:not(:-internal-select-author-button) {
+  appearance: auto;
+  box-sizing: border-box;
+  align-items: center;
+  -webkit-rtl-ordering: logical;
+  color: fieldtext;
+  background-color: field;
+  cursor: default;
+  white-space: pre;
+  border-width: 1px;
+  border-style: solid;
+  border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+  border-image: initial;
+  border-radius: 5px;
+}
+
+.menu-main{
+  position: sticky;
+  list-style: none;
+  padding: 10px 5px;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  margin-bottom: -4%;
+  z-index: 3;
+  color: darkslategray;
+  text-decoration: none;
+  font-weight: bold;
+  word-spacing: 10%;
+}
+
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 20px;
+  margin: 0 34px 0 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+
+.menu-main a, .menu-main a:visited {color: #000000;}
+.menu-main a.current, .menu-main a:hover{color: #000000;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  top: auto;
+  right: 50%;
+  bottom: 18px;
+  left: 50%;
+  /* background: #ffffff; */
+  background: black;
+  transition: .8s;
+}
+
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+  content: "|";
+  color: #ffffff;
+  display: inline-block;
+  vertical-align:top;
+}
+
+h1 {
+  text-align: center;
+  color: white; /* Изменен цвет заголовков на более темно-серый */
+}
+
+.slider {
+  padding-top: 50px;
+  width: auto; /* Увеличенная ширина */
+  height: 610px; /* Увеличенная высота */
+  margin: auto; /* Центрирование слайдера */
+  margin-top: 10px;
+}
+.slider img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.slider img.active {
+  display: block;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  }
+.button {
+  background-color: #007bff; /* Изменен цвет кнопок на синий */
+  border: none;
+  color: white;
+  padding: 12px 24px; /* Увеличены внутренние отступы */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px; /* Увеличен размер шрифта */
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px; /* Добавлены скругленные углы */
+}
+
+/* CSS для рекламного предложения */
+/* Добавьте этот CSS в ваш файл style5.css */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.banner-img {
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.banner-img.active {
+  opacity: 1;
+  margin-bottom: 10px;
+}
+
+.disco{
+  color: rgb(0, 0, 0);
+  display: flex;
+  padding: 30px 0 0 0;
+  margin: 0 100px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.disco-tittle{
+  font-weight: bolder;
+  font-size: 80px;
+  /* margin: 0 auto; */
+  /* padding: 0 0 0 320px; */
+}
+
+.disco-grid{
+  margin: 20px 100px 0 100px;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+  position: relative;
+  /* padding-bottom: -50px; */
+}
+
+.grid-item{
+  margin: 40px 0;
+}
+
+.mid-button{
+  display: flex;
+  padding-top: 50px;
+}
+
+.awards-u1{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  position: absolute;
+  font-weight: bold;
+  font-family:'Ubuntu Condensed', sans-serif;
+  padding: 0 0 0 220px;
+  /* margin-left: auto; */
+  margin: -50px;
+}
+
+.awards-u2{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  position: absolute;
+  font-weight: bold;
+  font-family:'Ubuntu Condensed', sans-serif;
+  margin-left: auto;
+  padding-left: 500px;
+  /* text-align: center; */
+  margin: -50px;
+}
+
+.awards-u3{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  position: absolute;
+  font-weight: bold;
+  font-family:'Ubuntu Condensed', sans-serif;
+  padding: 0 0 0 59%;
+  margin-left: auto;
+  margin: -50px;
+}
+.awards-u4{
+  color: rgb(0, 0, 0);
+  font-size: 30px;
+  position: absolute;
+  font-weight: bold;
+  font-family:'Ubuntu Condensed', sans-serif;
+  padding-left: 1190px;
+  margin-left: auto;
+  margin: -50px;
+}
+
+.alb-form{
+  display: inline-block;
+  width: 40%;
+  padding: 30px 0 20px 5px;
+  margin: 0px 100px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: rgb(53, 28, 22);
+  border-radius: 15px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.alb-form1{
+  /* color: rgb(177, 177, 177); */
+  display: inline-block;
+  width: 40%;
+  padding: 30px 0 20px 5px;
+  margin: 0px 0px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: rgb(124, 150, 148);
+  border-radius: 15px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.alb-form-tittle{
+  position: relative;
+  color:rgb(255, 255, 255);
+  font-size: 70px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.alb-form-tittle1{
+  position: relative;
+  color:rgb(255, 255, 255);
+  font-size: 70px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.alb-right-text{
+  width: 90%;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 10px 0 10px 25px;
+  line-height: 50px;
+}
+
+.alb-form2{
+  color: white;
+  display:block;
+  /* width: 80%; */
+  padding: 30px 0 20px 5px;
+  margin: 0px 100px 0 100px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: rgb(144, 185, 186);;
+  border-radius: 15px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.alb-form-tittle1{
+  position: relative;
+  color:white;
+  font-size: 70px;
+  font-weight: bold;
+  padding-top: 50px;
+}
+
+.alb-right-text1{
+  width: 90%;
+  font-size: 30px;
+  color: white;
+  font-weight:bold;
+}
+
+.form-img-bio1{
+  padding: 0px 20px 0 20px;
+  width: 40%;
+}
+
+.alb-form5{
+  color: white;
+  display: flex;
+  padding: 0px 0 0 0;
+  margin: 0 100px 100px;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  background-color: rgb(144, 185, 186);
+  border-radius: 15px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.futer{
+position: absolute;
+width: 1520px;
+height: 300px;
+left: 0px;
+padding-top: 50px;
+background: #454545;
+}
+
+.lalala{
+  /* justify-content: center; */
+  font-size: large;
+  color: #ffffff;
+  padding: 120px 0 0 44%;
+}
+
+.slider1 {
+
+  width: 450px; /* Увеличенная ширина */
+  height: 550px; /* Увеличенная высота */
+  margin: auto; /* Центрирование слайдера */
+}
+.slider1 img {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.slider1 img.active {
+  display: block;
+}
+
+.button-container1 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Увеличен внешний отступ сверху до 20px */
+}
+.button1 {
+  background-color: #5dff75; /* Изменен цвет кнопок на синий */
+  border: none;
+  color: white;
+  padding: 12px 24px; /* Увеличены внутренние отступы */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px; /* Увеличен размер шрифта */
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px; /* Добавлены скругленные углы */
+}
+
+.products {
+  display: block;
+  margin: 10px 20px 10px 20px;
+  margin-top: 12pt;
+  border-style: double;
+  border-color: #8C0088;
+  font-size: 15pt
+}
+.id {
+  display: block;
+  border-top: double;
+  border-color: #8C0088;
+  font-weight: bold;
+}
+
+
+.product {
+  display: block;
+  border-top: double;
+  border-color: #8C0088;
+  font-weight: bold;
+}
+
+.name {
+  display: block;
+  text-align: center;
+  border-top: double;
+  border-color: #8C0088;
+  font-weight: bold;
+}
+
+.price {
+  display: block;
+  text-align: center;
+  border-top: double;
+  border-color: #8C0088
+}
+
+.category {
+  display: block;
+  text-align: center;
+  border-top: double;
+  border-color: #8C0088
+}
+
+.description {
+  display: block;
+  text-align: center;
+  border-top: double;
+  border-color: #8C0088
+}
+
+.rating {
+  display: block;
+  text-align: center;
+  border-top: double;
+  border-color: #8C0088
+}
+
+.oblogka {
+  display: block;
+  text-align: center;
+  border-top: double;
+  border-color: #8C0088
+}
+
+@keyframes snowfall {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(100%); }
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  /* Остальные стили снежинок и анимации */
+}
+
+.card {
+  width: 420px; /* Увеличена ширина карточки до 420px */
+  background-color: #ffffff;
+  border-radius: 8px; /* Увеличены скругления углов */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Более выраженная тень */
+  padding: 24px; /* Увеличены внутренние отступы до 24px */
+  margin-bottom: 30px; /* Увеличен внешний отступ снизу до 30px */
+}
+
+.card p {
+  font-size: 16px; /* Увеличен размер текста до 16px */
+  color: #444; /* Изменен цвет текста на более темно-серый */
+}
+
+.card p:first-child {
+  font-size: 20px; /* Увеличен размер заголовка первого параграфа до 20px */
+  font-weight: bold;
+  margin-bottom: 12px; /* Увеличен внешний отступ снизу до 12px */
+}
+
+.back-button {
+  background-color: #007bff; /* Изменен цвет кнопки на синий */
+  border: none;
+  color: white;
+  padding: 12px 24px; /* Увеличены внутренние отступы */
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 18px; /* Увеличен размер текста до 18px */
+  margin: 0 auto; /* Перенесено по центру экрана */
+  cursor: pointer;
+  width: 200px; /* Увеличена ширина кнопки до 200px */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Изменен цвет при наведении на более темно-синий */
+}
+
+.back-button:active {
+  background-color: #004286; /* Изменен цвет при нажатии на еще более темно-синий */
+}
+
+.more-images {
+  display: inline-block;
+  justify-content: space-around; /* Изменено выравнивание между изображениями */
+  margin-top: 20px; /* Увеличен внешний отступ сверху до 20px */
+  align-items: center;
+  gap: 12px; /* Увеличен интервал между изображениями до 12px */
+}
+
+.more-images img {
+  width: 100px; /* Увеличена ширина изображений до 100px */
+  height: 80px; /* Увеличена высота изображений до 80px */
+  object-fit: cover;
+  cursor: pointer;
+}
+
+#rating_bar {
+  display: inline-block;
+  justify-content: center;
+  margin-top: 20px; /* Увеличен внешний отступ сверху до 20px */
+}
+
+#rating_bar span {
+  font-size: 36px; /* Увеличен размер звезд до 36px */
+  cursor: pointer;
+  margin-right: 8px; /* Увеличен отступ между звездами справа до 8px */
+}
+
+#rating_bar span:last-child {
+  margin-right: 0; /* Убран отступ после последней звезды */
+}
+
+#rating_bar span:hover {
+  color: gold; /* Изменен цвет звезд при наведении на золотой */
+}
